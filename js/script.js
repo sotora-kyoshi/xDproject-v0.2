@@ -1,4 +1,4 @@
-// === DATABASE MUSIK ===
+// === DATABASE MUSIK (LENGKAP DAN DIREVISI) ===
 const musicData = {
     japanese: {
         title: 'Japanese music based',
@@ -21,31 +21,33 @@ const musicData = {
     altIndie: { title: 'Alternative/Indie', artists: ['Her’s', 'Cavetown', 'Gentle Bones', 'grentperez', 'suggi', 'Bruno Major', 'Luke Chiang', 'keshi', 'New West', 'Clairo', 'Ricky Montgomery', 'sombr', 'Gigi Perez', 'The Marias', 'd4vd', 'Finding Hope', 'Rex Orange County', 'Ruel', 'Conan Gray', 'Beach Bunny', 'Cafuné', 'Ashe', 'TV Girl', 'beabadoobee', 'Mitski'] },
     mainstreamPop: { title: 'Mainstream Pop', artists: ['James Arthur', 'Shawn Mendes', 'One Direction', 'The Vamps', 'Adele', 'Ed Sheeran', 'Dhruv', 'Jeremy Zucker', 'Lauv', 'Dan + Shay', 'Bazzi', 'Ali Gatie', 'Troye Sivan', 'NIKI', 'JP Saxe', 'Lewis Capaldi', 'Calum Scott', 'Lukas Graham', 'Ariana Grande', 'Justin Bieber', 'ZAYN', 'Meghan Trainor'] },
     indieRock: { title: 'Indie Rock', artists: ['Radiohead'] },
+    
+    // ===== BAGIAN INI YANG DIPERBAIKI =====
     kjwRnb: {
         title: 'K/J/I/W-R&B songs',
         type: 'construction',
-        message: '</under construction 🚧> <br> please wait patiently.',
+        message: '&lt;/under construction 🚧&gt; <br> please wait patiently.',
         buttonText: 'do not click',
         buttonUrl: 'https://youtu.be/fC7oUOUEEi4'
     },
     indieMore: {
         title: 'Indonesian EVEN MORE indie',
         type: 'construction',
-        message: '</under construction 🚧> <br> please wait patiently.',
+        message: '&lt;/under construction 🚧&gt; <br> please wait patiently.',
         buttonText: 'do not click',
         buttonUrl: 'https://youtu.be/dQw4w9WgXcQ'
     },
     otherIndo: {
         title: 'other Indonesian music based',
         type: 'construction',
-        message: '</under construction 🚧> <br> please wait patiently.',
+        message: '&lt;/under construction 🚧&gt; <br> please wait patiently.',
         buttonText: 'do not click',
         buttonUrl: 'https://youtu.be/B5SL9yrMPn8'
     },
     randomMusic: {
         title: 'random music',
         type: 'construction',
-        message: '</under construction 🚧> <br> please wait patiently.',
+        message: '&lt;/under construction 🚧&gt; <br> please wait patiently.',
         buttonText: 'do not click',
         buttonUrl: 'https://hiurono.netlify.app/other/bug.html'
     }
