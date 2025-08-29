@@ -49,7 +49,7 @@ const musicData = {
         type: 'construction',
         message: '&lt;/under construction 🚧&gt; <br> please wait patiently.',
         buttonText: 'do not click',
-        buttonUrl: 'https://hiurono.netlify.app/other/bug.html'
+        buttonUrl: 'https://hiurono.netlify.app/other/bug'
     }
 };
 
