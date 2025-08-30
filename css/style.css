@@ -15,7 +15,7 @@ body {
     margin: 0; 
     box-sizing: border-box;
     font-family: 'Merriweather', serif;
-    font-weight: 700;
+    font-weight: 400;
 }
 
 /* ===== ANIMASI PEMBUKA HALAMAN ===== */
@@ -157,7 +157,7 @@ p { margin: 0; line-height: 1.4; font-size: 14px; }
 .pink-bg { background-color: var(--soft-pink); }
 .avatar-container img { width: 100%; height: 100%; object-fit: cover; display: block; }
 .avatar-raised {
-    transform: translateY(-94px);
+    transform: translateY(-34px);
 }
 
 /* ===== BOX KEDUA ===== */
@@ -284,7 +284,7 @@ p { margin: 0; line-height: 1.4; font-size: 14px; }
     padding: 8px 15px;
     color: white;
     background-color: #333;
-    border-radius: 20px;
+    border-radius: 5px;
     text-decoration: none;
     font-weight: bold;
     font-size: 14px;
@@ -319,13 +319,16 @@ p { margin: 0; line-height: 1.4; font-size: 14px; }
 .popup-back-button {
     margin-top: 15px;
     padding: 5px 10px;
-    background: #eee;
-    border: 1px solid #ccc;
+    background: #333;
+    color: white;
+    border: 1px solid #333;
     cursor: pointer;
     align-self: flex-start;
+    border-radius: 5px;
 }
 .popup-back-button:hover {
-    background: #ddd;
+    background: #555;
+    border-color: #555;
 }
 .popup-info-text {
     font-size: 13px;
@@ -375,10 +378,11 @@ p { margin: 0; line-height: 1.4; font-size: 14px; }
     color: #555;
 }
 
-/* ===== KONTROL POSISI VERTIKAL ITEM GRID ===== */
+/* ===== KONTROL POSISI VERTIKAL & LAYER ITEM GRID ===== */
 #music-interest-item {
-    /* Gunakan nilai negatif untuk naik, positif untuk turun */
-    transform: translateY(-41px); 
+    transform: translateY(-135px);
+    position: relative; /* Diperlukan untuk z-index */
+    z-index: 1; /* Lapisan bawah */
 }
 
 #interests-item {
@@ -386,5 +390,7 @@ p { margin: 0; line-height: 1.4; font-size: 14px; }
 }
 
 #games-item {
-    transform: translateY(-69px);
+    transform: translateY(-41px);
+    position: relative; /* Diperlukan untuk z-index */
+    z-index: 2; /* Lapisan atas, akan menutupi music-interest */
     }
