@@ -21,44 +21,43 @@ const musicData = {
     altIndie: { title: 'Alternative/Indie', artists: ['Her’s', 'Cavetown', 'Gentle Bones', 'grentperez', 'suggi', 'Bruno Major', 'Luke Chiang', 'keshi', 'New West', 'Clairo', 'Ricky Montgomery', 'sombr', 'Gigi Perez', 'The Marias', 'd4vd', 'Finding Hope', 'Rex Orange County', 'Ruel', 'Conan Gray', 'Beach Bunny', 'Cafuné', 'Ashe', 'TV Girl', 'beabadoobee', 'Mitski'] },
     mainstreamPop: { title: 'Mainstream Pop', artists: ['James Arthur', 'Shawn Mendes', 'One Direction', 'The Vamps', 'Adele', 'Ed Sheeran', 'Dhruv', 'Jeremy Zucker', 'Lauv', 'Dan + Shay', 'Bazzi', 'Ali Gatie', 'Troye Sivan', 'NIKI', 'JP Saxe', 'Lewis Capaldi', 'Calum Scott', 'Lukas Graham', 'Ariana Grande', 'Justin Bieber', 'ZAYN', 'Meghan Trainor'] },
     indieRock: { title: 'Indie Rock', artists: ['Radiohead'] },
-    
-    // ===== BAGIAN INI YANG DIPERBAIKI =====
     kjwRnb: {
         title: 'K/J/I/W-R&B songs',
         type: 'construction',
-        message: '&lt;/under construction 🚧&gt; <br> please wait patiently.',
+        message: '</under construction 🚧> <br> please wait patiently.',
         buttonText: 'do not click',
         buttonUrl: 'https://youtu.be/fC7oUOUEEi4'
     },
     indieMore: {
         title: 'Indonesian EVEN MORE indie',
         type: 'construction',
-        message: '&lt;/under construction 🚧&gt; <br> please wait patiently.',
+        message: '</under construction 🚧> <br> please wait patiently.',
         buttonText: 'do not click',
         buttonUrl: 'https://youtu.be/dQw4w9WgXcQ'
     },
     otherIndo: {
         title: 'other Indonesian music based',
         type: 'construction',
-        message: '&lt;/under construction 🚧&gt; <br> please wait patiently.',
+        message: '</under construction 🚧> <br> please wait patiently.',
         buttonText: 'do not click',
         buttonUrl: 'https://youtu.be/B5SL9yrMPn8'
     },
     randomMusic: {
         title: 'random music',
         type: 'construction',
-        message: '&lt;/under construction 🚧&gt; <br> please wait patiently.',
+        message: '</under construction 🚧> <br> please wait patiently.',
         buttonText: 'do not click',
-        buttonUrl: 'https://hiurono.netlify.app/other/bug.html'
+        buttonUrl: 'https://hiurono.netlify.app/other/bug'
     }
 };
 
-// === DATABASE GAME ===
+// === DATABASE GAME (DENGAN PERBAIKAN) ===
 const gameData = {
     roblox: {
         title: "Roblox Games",
-        download: {
+        download: { 
             name: "Download Roblox",
+            // ===== DATA LINK YANG HILANG DITAMBAHKAN KEMBALI DI SINI =====
             links: {
                 playstore: "https://play.google.com/store/apps/details?id=com.roblox.client",
                 appstore: "https://apps.apple.com/us/app/roblox/id431946152"
@@ -86,6 +85,8 @@ const gameData = {
     minecraft: {
         title: "Minecraft Editions",
         type: "direct_links", 
+        // ===== DESKRIPSI DITAMBAHKAN DI SINI =====
+        description: "Bangun apa saja yang bisa kamu bayangkan! Jelajahi dunia balok yang tak terbatas dan pilih edisi yang tepat untukmu.",
         links: [
             { name: "Java Edition", url: "https://www.minecraft.net/en-us/store/minecraft-java-bedrock-edition-pc", cssClass: "java" },
             { name: "Bedrock Edition", url: "https://www.minecraft.net/en-us/store/minecraft-java-bedrock-edition-pc", cssClass: "bedrock" },
@@ -95,23 +96,43 @@ const gameData = {
     },
     hoyoverse: {
         title: "Hoyoverse Games",
-        games: ["Genshin Impact", "Honkai: Star Rail", "Zenless Zone Zero"]
+        games: [
+            { name: "Genshin Impact", desc: "Jelajahi dunia fantasi Teyvat yang luas dalam RPG open-world dengan visual anime yang memukau." },
+            { name: "Honkai: Star Rail", desc: "Naik kereta Astral Express dan jelajahi keajaiban galaksi dalam RPG fantasi luar angkasa." },
+            { name: "Zenless Zone Zero", desc: "Gim action RPG urban fantasi dengan gaya visual trendi dan pertempuran yang cepat." }
+        ]
     },
     rhythm: { 
         title: "Rhythm Games", 
-        games: ["Rhythm Hive"] 
+        games: [
+            { name: "Rhythm Hive", desc: "Mainkan lagu-lagu dari artis HYBE favoritmu seperti BTS, TXT, dan ENHYPEN." }
+        ] 
     },
     simulator: { 
         title: "Simulator Games", 
-        games: ["Township", "Hayday"] 
+        games: [
+            { name: "Township", desc: "Bangun kota impianmu! Panen tanaman, jalankan pabrik, dan jual barang untuk mengembangkan kotamu." },
+            { name: "Hayday", desc: "Rasakan kehidupan bertani, rawat ternak, dan berdagang hasil panen dengan tetangga dan teman." }
+        ] 
     },
     honorable: { 
         title: "Honorable Mentions", 
-        games: ["Geometry Dash", "Cookierun: Kingdom", "Sky: Children of the Light", "Puzzle Seventeen", "Plato: Fun Multiplayer Games", "Undercover: Word Party Game"] 
+        games: [
+            { name: "Geometry Dash", desc: "Lompati dan terbang melewati bahaya dalam platformer berbasis ritme yang menantang." },
+            { name: "Cookierun: Kingdom", desc: "Bangun kerajaan kue kering impianmu sambil bertarung melawan monster kue yang jahat." },
+            { name: "Sky: Children of the Light", desc: "Terbang melintasi dunia magis yang indah dalam petualangan sosial yang mengharukan." },
+            { name: "Puzzle Seventeen", desc: "Gim puzzle match-3 yang seru dan adiktif dengan tema grup K-Pop SEVENTEEN." },
+            { name: "Plato: Fun Multiplayer Games", desc: "Kumpulan lebih dari 45 game grup yang bisa dimainkan bersama teman-temanmu." },
+            { name: "Undercover: Word Party Game", desc: "Gim kata sosial untuk menemukan identitas rahasia pemain lain dalam kelompok." }
+        ] 
     },
     random: { 
         title: "Random Games", 
-        games: ["Block Blast", "Subway Surfers", "Ludo King", "Words of Wonders", "Magic Tiles", "Uno", "Temple Run", "Temple Run 2", "Among Us", "Fruit Merge", "Wordle", "Fruit Ninja", "Brain Test", "Goods Puzzle", "Cooking Madness", "Stumble Guys", "Tebak Gambar", "Helix Jump", "My Talking Tom", "Mahjong", "Cooking Mama", "Hill Climb Racing", "Harvest Town", "Ice Cream Truck", "My Hotpot Story", "Let Me Eat: Feeding Frenzy", "Ojol The Game"],
+        games: [
+            { name: "Subway Surfers", desc: "Lari secepat mungkin dan hindari kereta yang melaju dalam gim endless runner yang ikonik." },
+            { name: "Among Us", desc: "Bekerja sama atau berkhianat dalam gim multiplayer tentang kerja tim dan pengkhianatan di luar angkasa." },
+            { name: "Stumble Guys", desc: "Berlari, tersandung, dan jatuh melewati rintangan-rintangan lucu melawan 32 pemain lain." }
+        ],
         infoText: "Beberapa PS4, PS5, sama PSP games."
     }
 };
@@ -147,7 +168,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const showArtistDetailPopup = (artistName, categoryKey) => {
         popupTitle.textContent = artistName;
         const encodedArtistName = encodeURIComponent(artistName);
-        const linksHTML = `<p>Jelajahi musik dari <strong>${artistName}</strong> di platform favorit Anda:</p><div class="popup-artist-links"><a href="https://open.spotify.com/search/$${encodedArtistName}" target="_blank" rel="noopener noreferrer" class="music-platform-link spotify">Spotify</a><a href="https://music.apple.com/us/search?term=${encodedArtistName}" target="_blank" rel="noopener noreferrer" class="music-platform-link apple">Apple Music</a><a href="https://www.youtube.com/results?search_query=${encodedArtistName}" target="_blank" rel="noopener noreferrer" class="music-platform-link youtube">YouTube</a></div>`;
+        const linksHTML = `<p>Dengarkan musik dari <strong>${artistName}</strong> di platform favorit kamu (⁠｡⁠•̀⁠ᴗ⁠-⁠)⁠✧</p><div class="popup-artist-links"><a href="https://open.spotify.com/search/$${encodedArtistName}" target="_blank" rel="noopener noreferrer" class="music-platform-link spotify">Spotify</a><a href="https://music.apple.com/us/search?term=${encodedArtistName}" target="_blank" rel="noopener noreferrer" class="music-platform-link apple">Apple Music</a><a href="https://www.youtube.com/results?search_query=${encodedArtistName}" target="_blank" rel="noopener noreferrer" class="music-platform-link youtube">YouTube</a></div>`;
         const backButtonHTML = `<button class="popup-back-button" data-category="${categoryKey}">← Kembali</button>`;
         popupContent.innerHTML = linksHTML + backButtonHTML;
         popupBox.className = 'popup-box music-artist-view';
@@ -160,12 +181,16 @@ document.addEventListener('DOMContentLoaded', () => {
         popupTitle.textContent = category.title;
         let contentHTML = '';
         if (category.type === 'direct_links') {
-            contentHTML = `<div class="popup-game-links">${category.links.map(link => `<a href="${link.url}" target="_blank" rel="noopener noreferrer" class="game-store-link ${link.cssClass}">${link.name}</a>`).join('')}</div>`;
+            // ===== LOGIKA BARU UNTUK MENAMPILKAN DESKRIPSI MINECRAFT =====
+            if (category.description) {
+                contentHTML += `<p class="game-description" style="text-align: center; margin-bottom: 15px;">${category.description}</p>`;
+            }
+            contentHTML += `<div class="popup-game-links">${category.links.map(link => `<a href="${link.url}" target="_blank" rel="noopener noreferrer" class="game-store-link ${link.cssClass}">${link.name}</a>`).join('')}</div>`;
         } else if (categoryKey === 'roblox') {
             contentHTML += `<div class="game-item" data-game-name="${category.download.name}" data-category="${categoryKey}">${category.download.name}</div>`;
             contentHTML += category.games.map(game => `<div class="game-item" data-game-name="${game.name}" data-category="${categoryKey}">${game.name}</div>`).join('');
         } else {
-            contentHTML = category.games.map(gameName => `<div class="game-item" data-game-name="${gameName}" data-category="${categoryKey}">${gameName}</div>`).join('');
+            contentHTML = category.games.map(game => `<div class="game-item" data-game-name="${game.name}" data-category="${categoryKey}">${game.name}</div>`).join('');
         }
         if (category.infoText) { contentHTML += `<p class="popup-info-text">${category.infoText}</p>`; }
         popupContent.innerHTML = contentHTML;
@@ -173,12 +198,26 @@ document.addEventListener('DOMContentLoaded', () => {
         popupOverlay.classList.add('show');
     };
 
-    const showGameDownloadPopup = (gameName, categoryKey) => {
-        popupTitle.textContent = gameName;
-        const encodedGameName = encodeURIComponent(gameName);
-        let linksHTML = `<a href="https://play.google.com/store/search?q=${encodedGameName}&c=apps" target="_blank" rel="noopener noreferrer" class="game-store-link playstore">PlayStore</a><a href="https://apps.apple.com/us/search?term=${encodedGameName}" target="_blank" rel="noopener noreferrer" class="game-store-link appstore">AppStore</a>`;
-        if (gameName === 'Download Roblox') { linksHTML += `<a href="https://www.roblox.com/id/download" target="_blank" rel="noopener noreferrer" class="game-store-link">Other Devices</a>`; }
-        const contentHTML = `<div class="popup-game-links">${linksHTML}</div><button class="popup-back-button" data-category="${categoryKey}">← Kembali</button>`;
+    const showGameDownloadPopup = (game, categoryKey) => {
+        popupTitle.textContent = game.name;
+        const encodedGameName = encodeURIComponent(game.name);
+        let contentHTML = '';
+        if (game.name === 'Download Roblox') {
+            contentHTML = `<div class="popup-game-links">
+                <a href="${gameData.roblox.download.links.playstore}" target="_blank" rel="noopener noreferrer" class="game-store-link playstore">PlayStore</a>
+                <a href="${gameData.roblox.download.links.appstore}" target="_blank" rel="noopener noreferrer" class="game-store-link appstore">AppStore</a>
+                <a href="https://www.roblox.com/id/download" target="_blank" rel="noopener noreferrer" class="game-store-link">Other Devices</a>
+            </div>`;
+        } else {
+            contentHTML = `
+                <p class="game-description">${game.desc}</p>
+                <div class="popup-game-links">
+                    <a href="https://play.google.com/store/search?q=${encodedGameName}&c=apps" target="_blank" rel="noopener noreferrer" class="game-store-link playstore">PlayStore</a>
+                    <a href="https://apps.apple.com/us/search?term=${encodedGameName}" target="_blank" rel="noopener noreferrer" class="game-store-link appstore">AppStore</a>
+                </div>
+            `;
+        }
+        contentHTML += `<button class="popup-back-button" data-category="${categoryKey}">← Kembali</button>`;
         popupContent.innerHTML = contentHTML;
         popupBox.className = 'popup-box game-download-view';
     };
@@ -216,16 +255,30 @@ document.addEventListener('DOMContentLoaded', () => {
         const target = e.target;
         if (target.matches('.artist-item')) { showArtistDetailPopup(target.getAttribute('data-artist-name'), target.getAttribute('data-category')); }
         else if (target.matches('.game-item')) {
-            const gameName = target.getAttribute('data-game-name'); const categoryKey = target.getAttribute('data-category');
+            const gameName = target.getAttribute('data-game-name');
+            const categoryKey = target.getAttribute('data-category');
+            
             if (categoryKey === 'roblox') {
-                if (gameName === gameData.roblox.download.name) { showGameDownloadPopup(gameName, categoryKey); } 
-                else { const gameObj = gameData.roblox.games.find(g => g.name === gameName); if(gameObj) showRobloxGamePopup(gameObj, categoryKey); }
-            } else { showGameDownloadPopup(gameName, categoryKey); }
+                if (gameName === gameData.roblox.download.name) {
+                    showGameDownloadPopup({name: gameName, desc: ''}, categoryKey);
+                } else {
+                    const gameObj = gameData.roblox.games.find(g => g.name === gameName);
+                    if(gameObj) showRobloxGamePopup(gameObj, categoryKey);
+                }
+            } 
+            else {
+                const category = gameData[categoryKey];
+                const gameObj = category.games.find(g => g.name === gameName);
+                if (gameObj) showGameDownloadPopup(gameObj, categoryKey);
+            }
         }
         else if (target.matches('.popup-back-button')) {
             const categoryKey = target.getAttribute('data-category');
-            if (Object.keys(gameData).includes(categoryKey)) { showGameCategoryPopup(categoryKey); } 
-            else { showMusicCategoryPopup(categoryKey); }
+            if (Object.keys(gameData).includes(categoryKey)) {
+                showGameCategoryPopup(categoryKey);
+            } else {
+                showMusicCategoryPopup(categoryKey);
+            }
         }
         else if (popupBox.classList.contains('link-mode') && currentUrl) { window.open(currentUrl, '_blank'); }
     });
@@ -234,3 +287,4 @@ document.addEventListener('DOMContentLoaded', () => {
         popupOverlay.classList.remove('show');
     });
 });
+                
