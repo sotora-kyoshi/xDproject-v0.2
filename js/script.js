@@ -1,4 +1,3 @@
-// === DATABASE MUSIK (LENGKAP DAN DIREVISI) ===
 const musicData = {
     japanese: {
         title: 'Japanese music based',
@@ -47,17 +46,15 @@ const musicData = {
         type: 'construction',
         message: '</under construction 🚧> <br> please wait patiently.',
         buttonText: 'do not click',
-        buttonUrl: 'https://hiurono.netlify.app/other/bug'
+        buttonUrl: 'https://hiurono.netlify.app/other/bug.html'
     }
 };
 
-// === DATABASE GAME (DENGAN PERBAIKAN) ===
 const gameData = {
     roblox: {
         title: "Roblox Games",
         download: { 
             name: "Download Roblox",
-            // ===== DATA LINK YANG HILANG DITAMBAHKAN KEMBALI DI SINI =====
             links: {
                 playstore: "https://play.google.com/store/apps/details?id=com.roblox.client",
                 appstore: "https://apps.apple.com/us/app/roblox/id431946152"
@@ -85,7 +82,6 @@ const gameData = {
     minecraft: {
         title: "Minecraft Editions",
         type: "direct_links", 
-        // ===== DESKRIPSI DITAMBAHKAN DI SINI =====
         description: "Bangun apa saja yang bisa kamu bayangkan! Jelajahi dunia balok yang tak terbatas dan pilih edisi yang tepat untukmu.",
         links: [
             { name: "Java Edition", url: "https://www.minecraft.net/en-us/store/minecraft-java-bedrock-edition-pc", cssClass: "java" },
@@ -139,7 +135,6 @@ const gameData = {
 
 
 document.addEventListener('DOMContentLoaded', () => {
-    // === Mengambil Elemen DOM ===
     const popupTriggers = document.querySelectorAll('.popup-trigger');
     const popupOverlay = document.getElementById('popupOverlay');
     const popupBox = document.getElementById('popupBox');
@@ -147,9 +142,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const popupContent = document.getElementById('popupContent');
     let currentUrl = '';
 
-    // === FUNGSI-FUNGSI POPUP ===
-
-    // -- POPUP MUSIK --
     const showMusicCategoryPopup = (categoryKey) => {
         const category = musicData[categoryKey];
         if (!category) return;
@@ -174,14 +166,12 @@ document.addEventListener('DOMContentLoaded', () => {
         popupBox.className = 'popup-box music-artist-view';
     };
     
-    // -- POPUP GAME --
     const showGameCategoryPopup = (categoryKey) => {
         const category = gameData[categoryKey];
         if (!category) return;
         popupTitle.textContent = category.title;
         let contentHTML = '';
         if (category.type === 'direct_links') {
-            // ===== LOGIKA BARU UNTUK MENAMPILKAN DESKRIPSI MINECRAFT =====
             if (category.description) {
                 contentHTML += `<p class="game-description" style="text-align: center; margin-bottom: 15px;">${category.description}</p>`;
             }
@@ -230,7 +220,6 @@ document.addEventListener('DOMContentLoaded', () => {
         popupBox.className = 'popup-box roblox-game-view';
     };
 
-    // -- POPUP STANDAR --
     const showStandardPopup = (trigger) => {
         const type = trigger.getAttribute('data-type'), title = trigger.getAttribute('data-title'), url = trigger.getAttribute('data-url'), desc = trigger.getAttribute('data-desc');
         popupTitle.innerHTML = title;
@@ -239,7 +228,6 @@ document.addEventListener('DOMContentLoaded', () => {
         popupOverlay.classList.add('show');
     };
     
-    // === EVENT LISTENERS ===
     popupTriggers.forEach(trigger => {
         trigger.addEventListener('click', (e) => {
             e.stopPropagation();
@@ -287,4 +275,4 @@ document.addEventListener('DOMContentLoaded', () => {
         popupOverlay.classList.remove('show');
     });
 });
-                
+    
