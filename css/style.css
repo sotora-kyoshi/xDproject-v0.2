@@ -1,4 +1,3 @@
-/* ===== PENGATURAN GLOBAL & LATAR BELAKANG ===== */
 :root {
     --main-black: #1a1a1a;
     --main-white: #ffffff;
@@ -18,7 +17,6 @@ body {
     font-weight: 400;
 }
 
-/* ===== ANIMASI PEMBUKA HALAMAN ===== */
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(10px); }
     to { opacity: 1; transform: translateY(0); }
@@ -39,7 +37,6 @@ body {
     gap: 30px; 
 }
 
-/* ===== FONT & ELEMEN UMUM ===== */
 .pixel-font { 
     font-family: 'VT323', monospace; 
     font-weight: 700;
@@ -53,7 +50,6 @@ body {
     font-weight: normal;
 }
 
-/* ===== HEADER & BOX STYLE ===== */
 .browser-header, .content-box {
     border: 2px solid var(--main-black);
     background-color: var(--main-white); 
@@ -97,7 +93,6 @@ body {
     font-weight: 400;
 }
 
-/* ===== LAYOUT BOX (DESKTOP ONLY) ===== */
 .content-box {
     display: flex;
     flex-direction: row;
@@ -132,7 +127,6 @@ body {
 .right-column-grid .grid-item { display: flex; flex-direction: column; }
 .right-column-grid .grid-item:last-child { justify-content: flex-end; }
 
-/* ===== PENGATURAN TEKS & AVATAR ===== */
 .info-group {
     text-align: center;
 }
@@ -160,7 +154,6 @@ p { margin: 0; line-height: 1.4; font-size: 14px; }
     transform: translateY(-34px);
 }
 
-/* ===== BOX KEDUA ===== */
 .content-box.box-two {
     align-items: flex-start;
 }
@@ -170,7 +163,6 @@ p { margin: 0; line-height: 1.4; font-size: 14px; }
 .separator { width: 100%; border: none; border-top: 2px solid var(--main-black); margin: 0; }
 .avatar-container.four-by-five { aspect-ratio: 4 / 5; }
 
-/* ===== GAYA LINK INTERAKTIF ===== */
 .social-links {
     padding: 0px 0;
     display: flex;
@@ -199,7 +191,6 @@ p { margin: 0; line-height: 1.4; font-size: 14px; }
     color: #e95950;
 }
 
-/* ===== GAYA POPUP & OVERLAY ===== */
 .popup-overlay {
     position: fixed;
     top: 0; left: 0;
@@ -254,7 +245,6 @@ p { margin: 0; line-height: 1.4; font-size: 14px; }
     cursor: pointer;
 }
 
-/* === GAYA POPUP MUSIC & GAME === */
 #popupContent .artist-item,
 #popupContent .game-item {
     padding: 8px 12px;
@@ -340,7 +330,6 @@ p { margin: 0; line-height: 1.4; font-size: 14px; }
     cursor: default;
 }
 
-/* ===== GAYA 'UNDER CONSTRUCTION' ===== */
 .popup-construction-text {
     text-align: center;
     font-style: italic;
@@ -367,7 +356,6 @@ p { margin: 0; line-height: 1.4; font-size: 14px; }
     box-shadow: 1px 1px 0px var(--main-black);
 }
 
-/* ===== FOOTER ===== */
 .main-footer {
     width: 100%;
     text-align: center;
@@ -378,11 +366,10 @@ p { margin: 0; line-height: 1.4; font-size: 14px; }
     color: #555;
 }
 
-/* ===== KONTROL POSISI VERTIKAL & LAYER ITEM GRID ===== */
 #music-interest-item {
     transform: translateY(-135px);
-    position: relative; /* Diperlukan untuk z-index */
-    z-index: 1; /* Lapisan bawah */
+    position: relative;
+    z-index: 1;
 }
 
 #interests-item {
@@ -391,6 +378,6 @@ p { margin: 0; line-height: 1.4; font-size: 14px; }
 
 #games-item {
     transform: translateY(-41px);
-    position: relative; /* Diperlukan untuk z-index */
-    z-index: 2; /* Lapisan atas, akan menutupi music-interest */
-    }
+    position: relative;
+    z-index: 2;
+}
