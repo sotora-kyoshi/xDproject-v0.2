@@ -133,14 +133,68 @@ const gameData = {
     }
 };
 
-
 document.addEventListener('DOMContentLoaded', () => {
     const popupTriggers = document.querySelectorAll('.popup-trigger');
     const popupOverlay = document.getElementById('popupOverlay');
     const popupBox = document.getElementById('popupBox');
     const popupTitle = document.getElementById('popupTitle');
     const popupContent = document.getElementById('popupContent');
+    const darkModeToggle = document.getElementById('darkmode-checkbox');
+    const animationBg = document.getElementById('animation-bg');
+    const themeAssets = document.querySelectorAll('.theme-aware-asset');
     let currentUrl = '';
+
+    function applyTheme(isDarkMode) {
+        if (isDarkMode) {
+            document.body.classList.add('dark-mode');
+            themeAssets.forEach(asset => {
+                const originalSrc = asset.getAttribute('src');
+                if (originalSrc && !originalSrc.includes('_dark.')) {
+                    const extensionIndex = originalSrc.lastIndexOf('.');
+                    const newSrc = originalSrc.slice(0, extensionIndex) + '_dark' + originalSrc.slice(extensionIndex);
+                    asset.setAttribute('src', newSrc);
+                }
+            });
+        } else {
+            document.body.classList.remove('dark-mode');
+            themeAssets.forEach(asset => {
+                const originalSrc = asset.getAttribute('src');
+                if (originalSrc && originalSrc.includes('_dark.')) {
+                    const newSrc = originalSrc.replace('_dark.', '.');
+                    asset.setAttribute('src', newSrc);
+                }
+            });
+        }
+    }
+
+    darkModeToggle.addEventListener('change', () => {
+        const isDarkMode = darkModeToggle.checked;
+        document.body.classList.add('wave-transition');
+        setTimeout(() => {
+            applyTheme(isDarkMode);
+        }, 300);
+        setTimeout(() => {
+            document.body.classList.remove('wave-transition');
+        }, 1500);
+    });
+    
+    function createTwinklingStars(count) {
+        animationBg.innerHTML = '';
+        for (let i = 0; i < count; i++) {
+            const star = document.createElement('div');
+            star.classList.add('twinkling-star');
+            const size = Math.random() * 2 + 1;
+            star.style.width = `${size}px`;
+            star.style.height = `${size}px`;
+            star.style.top = `${Math.random() * 100}%`;
+            star.style.left = `${Math.random() * 100}%`;
+            star.style.animationDelay = `${Math.random() * 5}s`;
+            star.style.animationDuration = `${Math.random() * 3 + 2}s`;
+            animationBg.appendChild(star);
+        }
+    }
+    
+    createTwinklingStars(60);
 
     const showMusicCategoryPopup = (categoryKey) => {
         const category = musicData[categoryKey];
@@ -243,36 +297,4 @@ document.addEventListener('DOMContentLoaded', () => {
         const target = e.target;
         if (target.matches('.artist-item')) { showArtistDetailPopup(target.getAttribute('data-artist-name'), target.getAttribute('data-category')); }
         else if (target.matches('.game-item')) {
-            const gameName = target.getAttribute('data-game-name');
-            const categoryKey = target.getAttribute('data-category');
-            
-            if (categoryKey === 'roblox') {
-                if (gameName === gameData.roblox.download.name) {
-                    showGameDownloadPopup({name: gameName, desc: ''}, categoryKey);
-                } else {
-                    const gameObj = gameData.roblox.games.find(g => g.name === gameName);
-                    if(gameObj) showRobloxGamePopup(gameObj, categoryKey);
-                }
-            } 
-            else {
-                const category = gameData[categoryKey];
-                const gameObj = category.games.find(g => g.name === gameName);
-                if (gameObj) showGameDownloadPopup(gameObj, categoryKey);
-            }
-        }
-        else if (target.matches('.popup-back-button')) {
-            const categoryKey = target.getAttribute('data-category');
-            if (Object.keys(gameData).includes(categoryKey)) {
-                showGameCategoryPopup(categoryKey);
-            } else {
-                showMusicCategoryPopup(categoryKey);
-            }
-        }
-        else if (popupBox.classList.contains('link-mode') && currentUrl) { window.open(currentUrl, '_blank'); }
-    });
-
-    popupOverlay.addEventListener('click', () => {
-        popupOverlay.classList.remove('show');
-    });
-});
-    
+     
