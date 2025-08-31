@@ -12,6 +12,8 @@
 </head>
 <body>
 
+    <div id="animation-bg"></div>
+
     <div class="page-wrapper">
         <header class="browser-header">
             <div class="header-content">
@@ -25,11 +27,11 @@
                 <div class="left-column">
                     <div class="profile-main">
                         <div class="avatar-container one-by-one">
-                            <img src="assets/images/avatar1.jpg" alt="Avatar Aksara">
+                            <img src="assets/images/avatar1.jpg" alt="Avatar Aksara" class="theme-aware-asset">
                         </div>
                         <div class="info-group">
                             <h2 class="pixel-font">AKSARA</h2>
-                            <img src="assets/images/line.png" alt="divider" class="divider-line">
+                            <img src="assets/images/line.png" alt="divider" class="divider-line theme-aware-asset">
                             <p class="sans-serif-font details">
                                 aksa ! any pronouns ! legal age<br>
                                 IXTP ! ind/eng ! <span class="popup-trigger text-link" 
@@ -45,19 +47,19 @@
                     </div>
                     <div class="social-links">
                         <div class="social-icon popup-trigger" data-title="Instagram: hiurono" data-url="https://instagram.com/hiurono" data-desc="Klik untuk mengunjungi profil">
-                            <img src="assets/icon/instagram.png" alt="Instagram Icon">
+                            <img src="assets/icon/instagram.png" alt="Instagram Icon" class="theme-aware-asset">
                         </div>
                         <div class="social-icon popup-trigger" data-title="Telegram: hiurono" data-url="https://t.me/hiurono" data-desc="Klik untuk mengirim pesan">
-                            <img src="assets/icon/telegram.png" alt="Telegram Icon">
+                            <img src="assets/icon/telegram.png" alt="Telegram Icon" class="theme-aware-asset">
                         </div>
                         <div class="social-icon popup-trigger" data-title="Roblox Profile" data-url="https://www.roblox.com/share?code=4b3ebc0a35fd0d45b98f200d4e2c4f87" data-desc="Klik untuk mengunjungi profil">
-                           <img src="assets/icon/roblox.png" alt="Roblox Icon">
+                           <img src="assets/icon/roblox.png" alt="Roblox Icon" class="theme-aware-asset">
                         </div>
                         <div class="social-icon popup-trigger" data-title="Letterboxd: hiurono" data-url="https://boxd.it/dGNZ5" data-desc="Klik untuk melihat film">
-                            <img src="assets/icon/letterboxd.png" alt="Letterboxd Icon">
+                            <img src="assets/icon/letterboxd.png" alt="Letterboxd Icon" class="theme-aware-asset">
                         </div>
                         <div class="social-icon popup-trigger" data-title="Goodreads Profile" data-url="https://www.goodreads.com/user/show/193320259" data-desc="Klik untuk melihat buku">
-                            <img src="assets/icon/goodreads.png" alt="Goodreads Icon">
+                            <img src="assets/icon/goodreads.png" alt="Goodreads Icon" class="theme-aware-asset">
                         </div>
                     </div>
                 </div>
@@ -105,7 +107,7 @@
                     </div>
                     <div class="grid-item">
                         <div class="avatar-container one-by-one pink-bg avatar-raised">
-                            <img src="assets/images/avatar2.jpg" alt="Avatar sekunder">
+                            <img src="assets/images/avatar2.jpg" alt="Avatar sekunder" class="theme-aware-asset">
                         </div>
                     </div>
                 </div>
@@ -114,7 +116,7 @@
             <section class="content-box box-two">
                 <div class="box-column">
                     <div class="avatar-container four-by-five">
-                        <img src="assets/images/avatar3.jpg" alt="Avatar Kendall">
+                        <img src="assets/images/avatar3.jpg" alt="Avatar Kendall" class="theme-aware-asset">
                     </div>
                      <h2 class="pixel-font">⁠About Me</h2>
                     <p class="sans-serif-font details">
@@ -137,6 +139,16 @@
             </section>
         </main>
         
+        <div class="theme-switch-wrapper">
+            <label class="theme-switch" for="darkmode-checkbox">
+                <input type="checkbox" id="darkmode-checkbox" />
+                <div class="slider">
+                    <svg class="icon icon-sun" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 12m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0" /><path d="M3 12h1m8 -9v1m8 8h1m-9 8v1m-6.4 -15.4l.7 .7m12.1 -.7l-.7 .7m0 11.4l.7 .7m-12.1 -.7l-.7 .7" /></svg>
+                    <svg class="icon icon-moon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" /></svg>
+                </div>
+            </label>
+        </div>
+
         <footer class="main-footer">
             <p>© 2025 Aksara, xDproject.</p>
         </footer>
@@ -151,4 +163,4 @@
     
     <script src="js/script.js"></script>
 </body>
-    </html>
+                                </html>
