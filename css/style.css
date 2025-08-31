@@ -26,42 +26,19 @@ body.dark-mode {
 }
 
 body {
+    background-color: var(--bg-color);
     color: var(--text-color);
     padding: 30px; 
     margin: 0; 
     box-sizing: border-box;
     font-family: 'Merriweather', serif;
     font-weight: 400;
+    transition: background-color 0.5s ease-in-out;
 }
 
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(10px); }
     to { opacity: 1; transform: translateY(0); }
-}
-
-body::before, body::after {
-    content: '';
-    position: fixed;
-    top: -3000px; /* Posisi awal lebih tinggi untuk range 6000px */
-    left: 50%;
-    width: 6000px; /* Range wave yang lebih besar */
-    height: 6000px; /* Range wave yang lebih besar */
-    background-color: var(--bg-color);
-    border-radius: 45%;
-    z-index: 9990;
-    transform: translate(-50%, 0%) scale(0); /* Awalnya tidak ada offset Y */
-    opacity: 1;
-    pointer-events: none;
-}
-body.wave-transition::before {
-    animation: wave 1s cubic-bezier(0.65, 0, 0.35, 1);
-}
-body.wave-transition::after {
-    animation: wave 1s cubic-bezier(0.65, 0, 0.35, 1) 0.1s;
-}
-@keyframes wave {
-    from { transform: translate(-50%, 0%) scale(0); }
-    to { transform: translate(-50%, 0%) scale(1); }
 }
 
 .page-wrapper {
@@ -262,23 +239,6 @@ input:checked + .slider { background-color: #212a4a; box-shadow: 0 0 8px 3px #a8
 input:checked + .slider .icon-sun { opacity: 0; transform: translateX(26px) rotate(90deg); }
 input:checked + .slider .icon-moon { opacity: 1; transform: translateX(0) rotate(0); }
 
-#animation-bg {
-    position: fixed; top: 0; left: 0; width: 100%; height: 100vh;
-    overflow: hidden; z-index: -1; pointer-events: none;
-    background-color: var(--bg-color);
-    transition: background-color 0.5s ease-in-out;
-}
-.twinkling-star {
-    position: absolute;
-    border-radius: 50%;
-    background-image: radial-gradient(circle, rgba(255,255,255,0.8) 0%, rgba(255,255,255,0) 70%);
-    opacity: 0;
-}
-body.dark-mode .twinkling-star { animation: twinkle 4s infinite ease-in-out; }
-@keyframes twinkle {
-    0%, 100% { opacity: 0; } 50% { opacity: 1; }
-}
-
 .main-footer {
     width: 100%; text-align: center; margin-top: 0; padding: 10px 0;
     font-family: 'Merriweather', serif; font-size: 14px; color: var(--text-color-light);
@@ -287,4 +247,4 @@ body.dark-mode .twinkling-star { animation: twinkle 4s infinite ease-in-out; }
 #music-interest-item { transform: translateY(-135px); position: relative; z-index: 1; }
 #interests-item { transform: translateY(-41px); }
 #games-item { transform: translateY(-41px); position: relative; z-index: 2; }
-             
+                                                                 
